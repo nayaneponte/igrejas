@@ -1,0 +1,12 @@
+<h1>Missas</h1>
+
+
+<ul>
+    <% @masses.each do |mass| %>
+        <li> <%= link_to mass.day, mass %>  - <%=  mass.hour%> </li>  
+    <% end%>
+</ul>
+
+<%= link_to 'adicionar novas missas', new_mass_path %>
+
+  

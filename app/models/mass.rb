@@ -1,0 +1,2 @@
+class Mass < ApplicationRecord
+end

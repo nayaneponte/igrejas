@@ -1,0 +1,9 @@
+<h1>Confissões</h1>
+
+<ul>
+    <% @confessions.each do |conf| %>
+        <li> <%= link_to conf.day, conf %>  </li>
+    <% end %>
+</ul>
+
+<%= link_to 'Novo Horário', new_confession_path %>
