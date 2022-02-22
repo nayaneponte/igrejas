@@ -1,7 +1,3 @@
 <h1>Adicionar Horário de Confissão</h1>
 
-<%=simple_form_for @confession do |c|%>
-    <%= c.input :day%>
-    <%= c.input :hour%>
-    <%= c.button :submit%>
-<%end%>
+<%= render 'form', @confession: confession%>

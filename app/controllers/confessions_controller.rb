@@ -23,8 +23,28 @@ class ConfessionsController < ApplicationController
     end
   end
 
+  def edit
+    @confession = Confession.find(params[:id])
+  end
 
- 
+  def update
+    @confession = Confession.find(params[:id])
+
+    if @confession.update(confession_params)
+
+      redirect_to @confession
+    else
+      render :edit, status: :unprocessable_entity
+      
+    end
+  end
+
+  def destroy
+    @confession = Confession.find(params[:id])
+    @confession.destroy
+
+    redirect_to confessions_path
+  end
 
   private
 

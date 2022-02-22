@@ -2,3 +2,9 @@
 <p> Dia: <%= @confession.day %>   </p>
 <p> Horário: <%= @confession.hour %> </p>
 
+<%= link_to 'voltar', confessions_path %>
+<%= link_to 'editar', edit_confession_path %>
+<%= button_to 'apagar', @confession, method: :delete%>
+
+
+
